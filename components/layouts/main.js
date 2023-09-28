@@ -14,3 +14,5 @@ const Main = ({ children, router }) => {
     </Box>
   )
 }
+
+export default Main
