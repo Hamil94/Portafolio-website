@@ -34,3 +34,29 @@ const LinkItem = ({ href, path, children }) => {
     </Link>
   )
 }
+
+const Navbar = props => {
+  const { path } = props
+
+  return (
+    <Box
+      position="fixed"
+      as="nav"
+      bg={useColorModeValue('#ffffff40', '#20202380')}
+      style={{ backdropFilter: 'blur(10px)' }}
+      zIndex={1}
+      {...props}
+    >
+      <Container
+        display="flex"
+        p={2}
+        maxW="container.md"
+        wrap="wrap"
+        alignItems="center"
+        justifyContent="space-between"
+      ></Container>
+    </Box>
+  )
+}
+
+export default Navbar
