@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import Logo from './logo'
 import NextLink from 'next/link'
 import {
@@ -15,8 +16,10 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+// import ThemeToggle from './theme-toggle-button'
+// import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 
-const LinkItem = ({ href, path, children }) => {
+const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
   return (
@@ -27,13 +30,17 @@ const LinkItem = ({ href, path, children }) => {
       p={2}
       bg={active ? 'grassTeal' : undefined}
       color={active ? '#202023' : inactiveColor}
-      // target={target}
-      // {...props}
+      target={target}
+      {...props}
     >
       {children}
     </Link>
   )
 }
+
+const MenuLink = forwardRef((props, ref) => (
+  <Link ref={ref} as={NextLink} {...props} />
+))
 
 const Navbar = props => {
   const { path } = props
@@ -84,7 +91,24 @@ const Navbar = props => {
                 icon={<HamburgerIcon />}
                 variant="outline"
                 aria-label="Options"
-              ></MenuButton>
+              />
+              <MenuList>
+                <MenuItem as={MenuLink} href="/">
+                  About
+                </MenuItem>
+                <MenuItem as={MenuLink} href="/works">
+                  Works
+                </MenuItem>
+                <MenuItem as={MenuLink} href="/posts">
+                  Posts
+                </MenuItem>
+                <MenuItem as={MenuLink} href="/">
+                  Uses
+                </MenuItem>
+                <MenuItem as={MenuLink} href="https://github.com/Hamil94">
+                  View GitHub
+                </MenuItem>
+              </MenuList>
             </Menu>
           </Box>
         </Box>
