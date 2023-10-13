@@ -1,5 +1,5 @@
-import { animate, motion } from 'framer-motion'
-import { chakra, shouldForwardProp, transition } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
+import { chakra, shouldForwardProp } from '@chakra-ui/react'
 import PropTypes from 'prop-types' // For prop validation
 
 // Create a motion div that also accepts chakra props
