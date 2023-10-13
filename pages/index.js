@@ -5,6 +5,7 @@ import {
   chakra,
   Container,
   Heading,
+  Link,
   List,
   ListItem,
   SimpleGrid,
@@ -110,9 +111,27 @@ const Page = () => {
         </BioSection>
       </Section>
       <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">I 🩶 </Heading>
+        <Heading as="h3" variant="section-title">
+          I 🩶
+        </Heading>
         <BioSection>
-          llasdkflk
+          <Paragraph>
+            Art, Music,{' '}
+            <Link
+              href="https://www.instagram.com/hamiltonposada/"
+              target="_blank"
+            >
+              Drawing
+            </Link>
+            , Playing Piano and Guitar,{' '}
+            <Link
+              href="https://www.instagram.com/hamiltonposada/"
+              target="_blank"
+            >
+              Photography
+            </Link>
+            , Coding, Real state market, Architecture, Design, 3D, VR, AR, machine learning.
+          </Paragraph>
         </BioSection>
       </Section>
     </Container>
