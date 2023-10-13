@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
+import { BioSection, BioYear } from '../components/bio'
 import Section from '../components/section'
 // import { IoLogoInstagram, IoLogoTwitter, IoLogoGitbub } from 'react-icons/io'
 import Image from 'next/image'
@@ -89,6 +90,30 @@ const Page = () => {
             My portfolio
           </Button>
         </Box>
+      </Section>
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>1994</BioYear>
+          Born in Pereira, Colombia
+        </BioSection>
+        <BioSection>
+          <BioYear>2011</BioYear> Move to Spain, Sevilla to study architecture
+          and design
+        </BioSection>
+        <BioSection>
+          <BioYear>2019 to present</BioYear> Move to Amsterdam, Netherlands to
+          study at Bit Academy, a coding school for Full-stack Developer,
+          specializing in 3D and design
+        </BioSection>
+      </Section>
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">I 🩶 </Heading>
+        <BioSection>
+          llasdkflk
+        </BioSection>
       </Section>
     </Container>
   )
