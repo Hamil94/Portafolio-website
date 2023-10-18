@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Text, useColorModeValue } from '@chakra-ui/react'
-import FootprintIcon from './icons/footprint'
 import styled from '@emotion/styled'
+import FlipChartIcon from './icons/flipcharticon'
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -25,7 +25,7 @@ const Logo = () => {
   return (
     <Link href="/">
       <LogoBox>
-        <FootprintIcon />
+        <FlipChartIcon />
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontWeight="bold"
