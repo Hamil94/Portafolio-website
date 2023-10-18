@@ -40,7 +40,7 @@ const Page = () => {
           <Heading as={'h2'} variant={'page-title'}>
             Hamilton Posada
           </Heading>
-          <p>Digital Craftzman (Artis / Developer / Designer)</p>
+          <p>Digital Craftzman (Artist / Developer / Designer)</p>
         </Box>
         <Box
           flexShrink={0}
@@ -130,7 +130,6 @@ const Page = () => {
             >
               Photography
             </Link>
-            , Coding, Real state market, Architecture, Design, 3D, VR, AR, machine learning.
           </Paragraph>
         </BioSection>
       </Section>
